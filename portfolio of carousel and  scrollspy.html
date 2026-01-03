@@ -1,0 +1,141 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        #section1 {
+            padding-top: 50px;
+            height: 500px;
+            color: white;
+            background-color: orange;
+        }
+
+        #section2 {
+            padding-top: 50px;
+            height: 500px;
+            color: green;
+            background-color: white;
+        }
+         #section3 {
+            padding-top: 50px;
+            height: 500px;
+            color: blue;
+            background-color:lightblue;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="conatiner-fluid">
+            <div class="navbariheader">
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Codingal</a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#section1">Section 1</a></li>
+                        <li><a href="#section2">Section 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="section1" class="conatiner-fluid">
+        <h1>Section 1</h1>
+        <h3>Polar Bears</h3>
+        <h5>The polar bear (Ursus maritimus) is a large bear native to the Arctic and nearby areas. It is closely related to the
+        brown bear, and the two species can interbreed. The polar bear is the largest extant species of bear and land carnivore
+        by body mass, with adult males weighing 300–800 kg (660–1,760 lb). The species is sexually dimorphic, as adult females
+        are much smaller. The polar bear is white- or yellowish-furred with black skin and a thick layer of fat. It is more
+        slender than the brown bear, with a narrower skull, longer neck and lower shoulder hump. Its teeth are sharper and more
+        adapted to cutting meat. The paws are large and allow the bear to walk on ice and paddle in the water.</h5>
+        <p>scroll this section</p>
+    </div>
+    <div id="section2" class="conatainer-fluid">
+        <h1>Section 2</h1>
+        <h3>Grizzly Bears</h3>
+        <h5>The grizzly bear (Ursus arctos horribilis), also known as the North American brown bear or simply grizzly, is a
+        population or subspecies[4] of the brown bear inhabiting North America.
+        
+        In addition to the mainland grizzly (Ursus arctos horribilis), other morphological forms of brown bear are sometimes
+        identified as grizzly bears. These include three living populations—the Kodiak bear (U. a. middendorffi), the Kamchatka
+        bear (U. a. beringianus), and the peninsular grizzly (U. a. gyas)—as well as the extinct California grizzly (U. a.
+        californicus†)[5][6] and Mexican grizzly (formerly U. a. nelsoni†).[7][8] On average, grizzly bears near the coast tend
+        to be larger while inland grizzlies tend to be smaller.</h5>
+        <p>Scroll this Section</p>
+    </div>
+    <div id="section3" class="conatainer-fluid">
+        <h1>Section 3</h1>
+        <h3>Pandas</h3>
+        <h5>The giant panda (Ailuropoda melanoleuca), also known as the panda bear or simply panda, is a bear species endemic to
+        China. It is characterised by its white coat with black patches around the eyes, ears, legs and shoulders. Its body is
+        rotund; adult individuals weigh 100 to 115 kg (220 to 254 lb) and are typically 1.2 to 1.9 m (3 ft 11 in to 6 ft 3 in)
+        long. It is sexually dimorphic, with males being typically 10 to 20% larger than females. A thumb is visible on its
+        forepaw, which helps in holding bamboo in place for feeding. It has large molar teeth and expanded temporal fossa to
+        meet its dietary requirements. It can digest starch and is mostly herbivorous with a diet consisting almost entirely of
+        bamboo and bamboo shoots.</h5>
+        <p>Scroll this Section</p>
+</body>
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Carousel Example</h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="download (2).jfif" alt="Polar bear" style="width:85%;">
+                </div>
+
+                <div class="item">
+                    <img src="download (3).jfif" alt="Grizzly Bear" style="width:85%;">
+                </div>
+                <div class="item">
+                    <img src="images.jfif" alt="New york" style="width:85%;">
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
