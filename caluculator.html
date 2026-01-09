@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Basic Calculator</title>
+</head>
+
+<body>
+
+    <input type="number" id="num1">
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="divide()">/</button>
+
+    <p id="result">Result:</p>
+
+    <script>
+        function add() {
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a + b);
+        }
+
+        function subtract() {
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a - b);
+        }
+
+        function multiply() {
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a * b);
+        }
+
+        function divide() {
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a / b);
+        }
+    </script>
+
+</body>
+
+</html>
