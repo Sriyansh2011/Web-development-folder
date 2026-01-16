@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Methods and Loops</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Methods and Loops</h1>
+
+    <div class="box">
+        <h3>Random Numbers (using Loop)</h3>
+        <p id="randomNumbers"></p>
+    </div>
+
+    <div class="box">
+        <h3>Current Date</h3>
+        <p id="currentDate"></p>
+    </div>
+
+    <div class="box">
+        <h3>Rounded Random Number</h3>
+        <p id="roundedNumber"></p>
+    </div>
+    <script>
+        function generateRandomNumbers() {
+            let result = "";
+            for (let i = 1; i <= 5; i++) {
+                let randomNum = Math.random();
+                result += "Random " + i + ": " + randomNum + "<br>";
+            }
+            document.getElementById("randomNumbers").innerHTML = result;
+        }
+        function showCurrentDate() {
+            let today = new Date();
+            document.getElementById("currentDate").innerHTML = today.toDateString();
+        }
+        function showRoundedRandom() {
+            let randomNum = Math.random() * 100;
+            let roundedNum = Math.round(randomNum);
+            document.getElementById("roundedNumber").innerHTML = roundedNum;
+        }
+        generateRandomNumbers();
+        showCurrentDate();
+        showRoundedRandom();
+    </script>
+
+</body>
+
+</html>
