@@ -1,0 +1,91 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Report</title>
+    </head>
+    <body>
+        <div id="weather-container">
+        
+            <h1 id="location">Weather in [City]</h1>
+        
+            <p>Current Temperature: <span id="temperature">...</span> &deg;C</p>
+        
+            <p>Conditions: <span id="description">...</span></p>
+        
+            <div id="weather-message"></div>
+        <script>
+            function getWeatherData() {
+
+                    // Example data: temperature in Celsius and a weather description
+
+                    const weatherData = {
+
+                        city: "London",
+
+                        temp: 15,
+
+                        description: "Rain"
+
+                    };
+
+                    return weatherData;
+
+                }
+
+                // Function to update the HTML using conditional logic
+
+                function updateWeatherReport() {
+
+                    const data = getWeatherData();
+
+                    // Access HTML elements using DOM manipulation
+
+                    document.getElementById("location").textContent = `Weather in ${data.city}`;
+
+                    document.getElementById("temperature").textContent = data.temp;
+
+                    document.getElementById("description").textContent = data.description;
+
+                    const weatherMessage = document.getElementById("weather-message");
+
+                    const body = document.body;
+
+                    // Use conditional statements to determine the output
+
+                    if (data.temp > 25 && data.description.includes("Sun")) {
+
+                        weatherMessage.innerHTML = "<p>It's a beautiful, hot, and sunny day! Wear a cap!</p>";
+
+                        body.style.backgroundColor = "#ffeb3b"; // Yellow background for sunny
+
+                    } else if (data.description.includes("Rain")) {
+
+                        weatherMessage.innerHTML = "<p>Don't forget your umbrella!</p>";
+
+                        body.style.backgroundColor = "#4a4a4a"; // Dark background for rain
+
+                        body.style.color = "#ffffff";
+
+                    } else if (data.temp < 10) {
+
+                        weatherMessage.innerHTML = "<p>It's quite cold! Wear a jacket.</p>";
+
+                        body.style.backgroundColor = "#bbdefb"; // Light blue for cold
+
+                    } else {
+
+                        weatherMessage.innerHTML = "<p>Check the forecast for more details.</p>";
+
+                        body.style.backgroundColor = "#ffffff"; // Default background
+
+                    }
+
+                }
+
+                // Call the function to display the weather report when the script loads
+
+                updateWeatherReport();
+        </script>
+    </body>
+</html>
