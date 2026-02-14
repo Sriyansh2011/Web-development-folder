@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Sort and Reverse Methods</title>
+        <style>
+            body{font-family: sans-serif; padding: 20px;}
+            .container{margin-top: 15px;}
+            button{ margin-right: 10px; padding: 8px 12px; cursor: pointer; }
+            #output{margin-top: 15px; font-weight: bold; color: darkblue;}
+        </style>
+    </head>
+
+    <body>
+        <h1>Java Script Array Methods: sort and reverse</h1>
+        <p>Original Array: <span id="originalArray">["mango"."apple","orange","Banana"]</span></p>
+
+        <button onclick="sortArray()">Sort Array (Ascending)</button>
+        <button onclick="reverseArray()">Reverse Array</button>
+        <button onclick="sortAndReverseArray()">Sort Array (Descending)</button>
+
+        <div class="container">
+            Current Array Status: <span id="output"></span>
+        </div>
+        <script>
+
+            // The array we will be modifying. These methods alter the original array.
+
+            const fruits = ["Mango", "Apple", "Orange", "Banana"];
+
+            // Function to display the current array in the output span
+
+            function displayArray() {
+
+                document.getElementById('output').textContent = JSON.stringify(fruits);
+
+            }
+
+            // Function to sort the array
+
+            function sortArray() {
+
+                fruits.sort(); // Sorts alphabetically by default
+
+                displayArray();
+
+            }
+
+            // Function to reverse the array
+
+            function reverseArray() {
+
+                fruits.reverse(); // Reverses the order of elements
+
+                displayArray();
+
+            }
+
+            // Function to sort in descending order (combine sort and reverse)
+
+            function sortAndReverseArray() {
+
+                fruits.sort();
+
+                fruits.reverse(); // First sort ascending, then reverse
+
+                displayArray();
+
+            }
+
+            // Display the initial array when the page loads
+
+            window.onload = display
+            </script>
+    </body>
+</html>
