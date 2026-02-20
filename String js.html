@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <script>
+            const string1 = "A String primitive";
+            const string2 = "Also a String primitive";
+            const string3 = "Yet Another String primitive";
+            const string4 = new String("A String object");
+            "cat".charAt(1);
+            "cat"[1];
+            const a = "a";
+            const b = "b";
+            if (a<b) {
+                console.log(`${a} is less than ${b}`);
+            } else if (a > b) {
+                
+                    console.log(`${a} is greater than ${b}`);
+            }
+            else {
+                    console.log(`${a} and ${b} are equal.`);
+            }
+            function areEqualCaseInsensitive(str1, str2) {
+                return str1.toUpperCase() === str2.toUpperCase();
+            }
+            const areEqualInUpperCase = (str1, str2) =>
+            str1.toUpperCase() === str1.toUpperCase();
+            const areEqualInLowerCase = (str1, str2) =>
+            str1.toLowerCase() === str2.toLowerCase();
+            areEqualInUpperCase("β", "ss");
+            areEqualInLowerCase("1","I");
+            const areEqual = (str1, str2, locale = "en-US") =>
+            str1.localeCompare(str2, locale, {sensitivity: "accent"}) === 0;
+            areEqual("β", "ss", "de");
+            areEqual("1","I","tr");
+            
+        </script>
+    </body>
+</html>
